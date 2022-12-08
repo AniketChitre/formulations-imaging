@@ -1,8 +1,11 @@
 # Formulations Imaging
-Imaging formulations samples for phase stability analysis
 
-The `opencv` python module is used to control a Logitech webcam for imaging purposes. Open the relevant directory in command window/terminal and enter `python -m webcam_image` to execute the script.
-This brings up a pop-up window showing the camera's image. Press space to capture an image and follow the prompts in the command window/terminal to give the sample a name etc.
+The following is a simple webcam script to image the liquid formulation samples I am preparing as part of my PhD, in order to take images to analyse their phase stability via computer vision techniques later. 
+
+The script can be used to control generic webcams. In my case, a Logitech C930 webcam was used. The camera is controlled via the `opencv` python module.
+The script must be executed in the relevant directory opened up in a command window/terminal with `python -m webcam_image`
+
+This brings up a pop-up window showing what the camera sees. Press the space bar to capture an image. Here it prompts me to enter a sample name etc. to automatically save the image with it's sample ID and whether it was stable or not.
 
 ## Dependencies 
 
