@@ -7,7 +7,7 @@ cv2.namedWindow("Logitech C920 - OpenCV App")
 
 cam.set(cv2.CAP_PROP_AUTOFOCUS, 0)
 
-focus = 85  # min: 0, max: 255, increment:5
+focus = 75  # min: 0, max: 255, increment:5
 cam.set(28, focus) 
 
 while True: 
@@ -28,7 +28,8 @@ while True:
     elif k%256 == 32: #space key to take image 
         sample_ID = input("Please enter sample ID: ")
         stability = input("The sample is stable True/False: ") 
-        img_name = "opencv_%s_%s_%s.png" % (datetime.today().strftime('%d-%m-%Y'),sample_ID, stability)
+        pH_status = input("Pre or post pH adjustment: ")
+        img_name = "opencv_%s_%s_%s_%s-pHAdj.png" % (datetime.today().strftime('%d-%m-%Y'),sample_ID, stability, pH_status)
         cv2.imwrite(img_name, frame)
         print("Image captured")
 
